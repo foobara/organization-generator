@@ -1,14 +1,14 @@
 RSpec.describe Foobara::Generators::OrganizationGenerator::GenerateOrganization do
-  let(:organization_name) { "SomePrefix::SomeOrg" }
+  let(:name) { "SomePrefix::SomeOrg" }
 
   let(:inputs) do
     {
-      organization_name:,
+      name:,
       description: "whatever"
     }
   end
-  let(:organization) { described_class.new(inputs) }
-  let(:outcome) { organization.run }
+  let(:command) { described_class.new(inputs) }
+  let(:outcome) { command.run }
   let(:result) { outcome.result }
 
   it "generates a organization" do
